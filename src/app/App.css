@@ -1,0 +1,327 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #c0cbf0;
+}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	padding: 16px;
+	background-color: #a9b9f0;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	z-index: 999;
+}
+.search-box {
+	display: flex;
+}
+.search-box #search {
+	padding: 10px 14px;
+	font-size: 15px;
+	margin-right: 10px;
+	width: 100%;
+	background-color: #c0cbf0;
+	border-radius: 7px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.search-box input:nth-child(2) {
+	padding: 12px;
+	font-size: 15px;
+	cursor: pointer;
+	background-color: #c0cbf0;
+	border-radius: 7px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.row {
+	display: flex;
+	padding: 16px;
+}
+.row .column-6 {
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.row .column-6 {
+	flex-basis: 50%;
+}
+.row .column-6.button-view {
+	padding: 17px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.row .column-6.content-view .more-details {
+	position: fixed;
+	min-height: calc(100vh - 96px);
+}
+
+.pokemon-list {
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 8px));
+	gap: 16px;
+}
+.single-pokemon {
+	cursor: pointer;
+	background-color: #f2f4f9;
+	width: 250px;
+	border-radius: 7px;
+	text-align: start;
+	padding: 10px;
+}
+.single-pokemon img {
+	width: 30px;
+}
+.single-pokemon p {
+	text-transform: capitalize;
+}
+
+.more-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.more-details .details-box {
+	padding: 0px 17px 0px 17px;
+	margin-top: 30px;
+}
+.more-details img {
+	width: 150px;
+	max-height: 200px;
+	filter: drop-shadow(5px 5px 5px hsl(0deg 0% 0% / 0.5));
+}
+.more-details .name span,
+.name {
+	text-transform: capitalize;
+}
+.more-details div p {
+	margin: 6px 0px;
+	text-align: left;
+}
+
+.pagination {
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
+.pagination button {
+	cursor: pointer;
+	padding: 7px 14px;
+}
+.pagination button[disabled] {
+	cursor: not-allowed;
+}
+
+.loading-section {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	background-color: rgba(177, 177, 198, 0.431);
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+.loading-section p {
+	width: 300px;
+}
+
+.search-view {
+	display: flex;
+	padding: 30px;
+	justify-content: center;
+	gap: 30px;
+	align-items: center;
+	width: fit-content;
+	margin: 17px auto 17px auto;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.search-view .result-info table {
+	border-collapse: collapse;
+}
+.search-view .result-info table td,
+.search-view .result-info table th {
+	padding: 10px 14px;
+}
+.search-result-text {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+
+.no-data {
+	text-align: center;
+	font-size: 18px;
+}
+
+.error-page {
+	height: calc(100vh - 157px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+}
+.error-page button, .not-found-case button {
+	cursor: pointer;
+	padding: 7px 14px;
+	font-size: 16px;
+}
+.error-page h1 {
+	text-align: center;
+}
+.error-heading {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.not-found-case {
+	text-align: center;
+}
+.not-found-case p {
+	margin-bottom: 30px;
+}
+
+.poke-types {
+	background-color: #4938e7;
+	padding: 3px 7px;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 7px;
+	font-size: 13px;
+	cursor: default;
+	background-color: #f4f2fb;
+	color: rgb(57, 54, 54);
+}
+
+footer {
+	color: #000000b5;
+	display: flex;
+	background-color: #a9b9f0;
+	place-content: center;
+	font-size: 14px;
+	padding: 14px 10px;
+	text-align: center;
+	margin-top: 44px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	flex: 0 0 auto;
+}
+footer .footer-section a {
+	color: #1c1b1b;
+	text-decoration: underline;
+}
+footer .footer-section a:last-child {
+	text-decoration: none;
+}
+footer .footer-section a span {
+	padding: 4px 11px;
+}
+
+@media (max-width: 969px) {
+	.row {
+		flex-direction: column-reverse;
+	}
+	.row .column-6.content-view .more-details {
+		position: static;
+		min-height: unset;
+		margin-bottom: 30px;
+	}
+	.more-details {
+		display: flex;
+		flex-direction: row;
+		gap: 35px;
+		height: auto;
+		align-items: center;
+	}
+	.more-details .details-box {
+		border: none;
+		border-left: 1px solid #e3e3e3;
+		padding-left: 12px;
+	}
+	.more-details .details-box p {
+		text-align: left;
+	}
+	.search-view {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 576px) {
+	.pokemon-list {
+		width: 100%;
+	}
+	.single-pokemon {
+		width: 100%;
+	}
+
+	.more-details .details-box {
+		padding: 17px;
+		border: 1px dashed black;
+	}
+	.more-details .details-box p:first-child {
+		margin-top: 0px;
+	}
+	.more-details .details-box p:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+@media (max-width: 557px) {
+	.search-view {
+		margin: 17px;
+	}
+}
+
+@media (max-width: 500px) {
+	.more-details {
+		flex-direction: column;
+		gap: 0;
+	}
+	.more-details div {
+		border-left: none;
+		padding-left: 0;
+	}
+	.more-details div p {
+		text-align: center;
+	}
+	.search-view .search-img img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 440px) {
+	footer .footer-section {
+		flex-direction: column;
+	}
+	footer div > span:nth-child(3) {
+		display: none;
+	}
+	.search-box #search {
+		padding: 10px 9px;
+		font-size: 12px;
+	}
+	.search-box input:nth-child(2) {
+		padding: 2px;
+		font-size: 12px;
+	}
+}
